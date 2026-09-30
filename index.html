@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonali & Jonathan - Wedding Celebration</title>
+    <title>Sonali & Jonathan - Divine Wedding Invitation</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,28 +22,30 @@
                 extend: {
                     colors: {
                         navy: {
-                            900: '#070f1e',
-                            800: '#0c1e38',
-                            700: '#152c4d',
-                            600: '#1e3a61'
+                            950: '#040b14',
+                            900: '#07111e',
+                            800: '#0b192e',
+                            700: '#122542',
+                            600: '#1a3358'
                         },
                         blush: {
-                            100: '#fdf2f4',
-                            200: '#fce4e8',
-                            300: '#f8b9c6',
-                            400: '#f38ca3',
-                            500: '#e85d7f'
+                            100: '#fdf3f5',
+                            200: '#f9d3db',
+                            300: '#f2a7b8',
+                            400: '#e08dac',
+                            500: '#e8b4b8'
                         },
                         gold: {
-                            300: '#f3e5ab',
-                            400: '#e6ca65',
+                            300: '#f9eecc',
+                            400: '#e8d27a',
                             500: '#d4af37',
-                            600: '#aa8c2c'
+                            600: '#b89428'
                         }
                     },
                     fontFamily: {
                         script: ['"Great Vibes"', 'cursive'],
                         serif: ['"Playfair Display"', 'serif'],
+                        garamond: ['"Cormorant Garamond"', 'serif'],
                         cinzel: ['"Cinzel"', 'serif'],
                         sans: ['"Montserrat"', 'sans-serif']
                     }
@@ -53,49 +55,126 @@
     </script>
 
     <style>
-        /* Custom scrollbar */
+        :root{
+            --rose: #e8b4c8;
+        }
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #070f1e;
+            background: #040b14;
         }
         ::-webkit-scrollbar-thumb {
-            background: #152c4d;
+            background: #122542;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #d4af37;
         }
 
-        /* Glassmorphism effects */
         .glass-card {
-            background: rgba(12, 30, 56, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.25);
+            background: rgba(11, 25, 46, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.28);
         }
 
         .glass-card-light {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(248, 185, 198, 0.2);
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(240, 168, 188, 0.22);
         }
 
-        /* Gold gradient text */
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #fff3c4 0%, #d4af37 50%, #aa8c2c 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
         }
 
-        .rose-gradient-text {
-            background: linear-gradient(135deg, #ffffff 0%, #f8b9c6 50%, #e85d7f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* ANGELS & MAJESTIC GATES ANIMATION STYLES */
+        .entrance-stage {
+            perspective: 1200px;
         }
 
-        /* Floating particles canvas overlay */
+        .gate-leaf-left {
+            transform-origin: left center;
+            transition: transform 2.8s cubic-bezier(0.77, 0, 0.175, 1);
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.35));
+        }
+
+        .gate-leaf-right {
+            transform-origin: right center;
+            transition: transform 2.8s cubic-bezier(0.77, 0, 0.175, 1);
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.35));
+        }
+
+        .angel-glow-left {
+            filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.85)) drop-shadow(0 0 35px rgba(242, 167, 184, 0.5));
+            transition: transform 2.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 2.2s ease-out;
+        }
+
+        .angel-glow-right {
+            filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.85)) drop-shadow(0 0 35px rgba(242, 167, 184, 0.5));
+            transition: transform 2.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 2.2s ease-out;
+        }
+
+        /* Opening Gate State Triggered via JS */
+        .gates-opening .gate-leaf-left {
+            transform: rotateY(-110deg);
+        }
+
+        .gates-opening .gate-leaf-right {
+            transform: rotateY(110deg);
+        }
+
+        .gates-opening .angel-left-group {
+            transform: translateX(-110%) rotateY(-50deg);
+            opacity: 0.2;
+        }
+
+        .gates-opening .angel-right-group {
+            transform: translateX(110%) rotateY(50deg);
+            opacity: 0.2;
+        }
+
+        /* Heavenly Light Burst Effect */
+        #heavenly-burst {
+            opacity: 0;
+            transition: opacity 1.8s ease-in-out;
+            background: radial-gradient(circle at center, rgba(255, 245, 200, 0.95) 0%, rgba(212, 175, 55, 0.6) 35%, rgba(11, 25, 46, 0) 70%);
+        }
+
+        .gates-opening #heavenly-burst {
+            opacity: 1;
+        }
+
+        #entrance-overlay {
+            transition: opacity 1.8s ease-in-out, visibility 1.8s ease-in-out;
+        }
+
+        /* Pulsing Glow Effect for Center Button */
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 25px rgba(212, 175, 55, 0.6), 0 0 45px rgba(224, 141, 172, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 45px rgba(212, 175, 55, 0.95), 0 0 75px rgba(224, 141, 172, 0.75);
+            }
+        }
+
+        .btn-pulse-glow {
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+
+        .btn-shimmer {
+            background: linear-gradient(90deg, #d4af37 0%, #f9eecc 50%, #d4af37 100%);
+            background-size: 200% 100%;
+            transition: all 0.4s ease;
+        }
+        .btn-shimmer:hover {
+            background-position: 100% 0;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+        }
+
         #petals-canvas {
             position: fixed;
             top: 0;
@@ -103,55 +182,76 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 10;
+            z-index: 20;
         }
 
-        /* Custom line animations */
-        .divider-line {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-        }
+        .gold {
+      background: linear-gradient(100deg, #b8934a, #f3e2b3 40%, #c9a35c 60%, #f7e9bd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding: .15em .3em;
+      line-height: 1.3
+    }
 
-        /* Shimmer effect for buttons */
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-        .btn-shimmer {
-            background: linear-gradient(90deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
-            background-size: 200% 100%;
-            transition: all 0.3s ease;
-        }
-        .btn-shimmer:hover {
-            background-position: 100% 0;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-        }
+    .par {
+      font-size: 1.05rem;
+      color: #d9cfe0;
+      margin: 0 0 6px
+    }
+    .amp {
+      font-size: 2.6rem;
+      color: var(--rose);
+      margin: 0
+    }
 
-        /* Floral corners styling */
-        .floral-bg-top-right {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' opacity='0.15'%3E%3Cpath fill='%23f8b9c6' d='M50 0 C70 20, 80 40, 100 50 C80 60, 70 80, 50 100 C30 80, 20 60, 0 50 C20 40, 30 20, 50 0 Z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: top right;
-            background-size: contain;
-        }
+    .script {
+      font-family: 'Great Vibes', 'Snell Roundhand', cursive;
+      font-weight: 400
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--rose)
+    }
+    .quote small {
+      display: block;
+      font-style: normal;
+      letter-spacing: .2em;
+      color: var(--gold);
+      margin-top: 4px;
+      font-family: 'Cinzel', serif;
+      font-size: .75rem
+    }
+    .pt-24{
+        padding-top : 5.9em;
+    }
     </style>
 </head>
-<body class="bg-navy-900 text-slate-100 font-sans antialiased selection:bg-blush-400 selection:text-navy-900 overflow-x-hidden">
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-blush-400 selection:text-navy-950 overflow-x-hidden">
 
-    <!-- Floating Petals Canvas -->
+    <!-- FALLING ROSE PETALS CANVAS -->
     <canvas id="petals-canvas"></canvas>
 
-    <!-- Audio Player Controller -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <button id="audio-toggle" onclick="toggleAudio()" class="flex items-center justify-center w-12 h-12 rounded-full glass-card text-gold-400 shadow-lg hover:scale-110 transition-transform duration-300 border border-gold-500/50 group" title="Toggle Wedding Music">
+    <!-- ENTRANCE OVERLAY WITH ETHEREAL ANGELS & MAJESTIC GRAND GATES -->
+     
+   
+
+    <!-- FLOATING AUDIO CONTROLLER -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button id="audio-toggle" onclick="toggleAudio()" class="flex items-center justify-center w-12 h-12 rounded-full glass-card text-gold-400 shadow-xl hover:scale-110 transition-transform duration-300 border border-gold-500/50 group" title="Toggle Background Music">
             <i id="audio-icon" class="fas fa-music text-lg group-hover:animate-bounce"></i>
         </button>
     </div>
 
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-gold-500/20 px-4 py-3 transition-all duration-300">
+    <!-- MAIN NAVBAR
+    <nav class="fixed top-0 left-0 right-0 z-30 glass-card border-b border-gold-500/20 px-4 py-3">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="#" class="font-script text-2xl md:text-3xl text-gold-400 hover:text-blush-300 transition-colors">Sonali & Jonathan</a>
+            <a href="#" class="font-script text-2xl md:text-3xl text-gold-400 hover:text-blush-300 transition-colors">
+                Sonali & Jonathan
+            </a>
             
             <div class="hidden md:flex space-x-6 text-xs uppercase tracking-widest font-cinzel text-slate-300">
                 <a href="#home" class="hover:text-gold-400 transition-colors">Home</a>
@@ -162,212 +262,191 @@
                 <a href="#rsvp" class="hover:text-gold-400 transition-colors">RSVP</a>
             </div>
 
-            <a href="#rsvp" class="bg-gold-500 text-navy-900 font-cinzel text-xs font-bold px-4 py-2 rounded-full hover:bg-gold-400 transition-all transform hover:scale-105 shadow-md">
-                RSVP Now
-            </a>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-navy-800 via-navy-900 to-black">
-        <!-- SVG Decorative Arch / Vignette Frame -->
-        <div class="absolute inset-0 pointer-events-none opacity-20">
-            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <circle cx="50" cy="50" r="45" stroke="#d4af37" stroke-width="0.2" fill="none" stroke-dasharray="1 2"/>
+-->
+    <!-- MAIN HOME SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-12 pb-16 px-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-navy-800 via-navy-900 to-navy-950">
+        
+        <!-- Corner Floral Artwork -->
+        <div class="absolute top-0 left-0 w-48 sm:w-72 md:w-96 opacity-60 pointer-events-none">
+            <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="100" fill="#e08dac" opacity="0.2" filter="blur(25px)"/>
+                <path d="M0 0 Q160 30 220 160 Q110 110 0 0 Z" fill="#e8b4b8" opacity="0.25"/>
+                <circle cx="130" cy="90" r="45" fill="#d4af37" opacity="0.15"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-0 right-0 w-48 sm:w-72 md:w-96 opacity-60 pointer-events-none rotate-180">
+            <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="100" fill="#e08dac" opacity="0.2" filter="blur(25px)"/>
+                <path d="M0 0 Q160 30 220 160 Q110 110 0 0 Z" fill="#e8b4b8" opacity="0.25"/>
+                <circle cx="130" cy="90" r="45" fill="#d4af37" opacity="0.15"/>
             </svg>
         </div>
 
-        <!-- Floral Accents (CSS SVG Illustration placeholders) -->
-        <div class="absolute top-10 left-4 w-32 md:w-64 opacity-60 pointer-events-none animate-pulse">
-            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 20 C60 10, 100 40, 120 80 C100 120, 60 140, 20 120 Z" fill="#f8b9c6" opacity="0.4"/>
-                <path d="M40 10 C80 20, 120 60, 110 100 C70 120, 30 100, 20 60 Z" fill="#e85d7f" opacity="0.3"/>
-            </svg>
-        </div>
-        <div class="absolute bottom-10 right-4 w-32 md:w-64 opacity-60 pointer-events-none rotate-180">
-            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 20 C60 10, 100 40, 120 80 C100 120, 60 140, 20 120 Z" fill="#f8b9c6" opacity="0.4"/>
-                <path d="M40 10 C80 20, 120 60, 110 100 C70 120, 30 100, 20 60 Z" fill="#e85d7f" opacity="0.3"/>
-            </svg>
-        </div>
-
-        <div class="relative z-20 text-center max-w-4xl mx-auto px-4 mt-8">
-            <!-- Holy Cross Element -->
-            <div class="mb-6 inline-block transform hover:scale-110 transition-transform duration-500">
-                <div class="relative flex items-center justify-center">
-                    <i class="fas fa-cross text-3xl md:text-4xl text-gold-400 drop-shadow-[0_0_10px_rgba(212,175,55,0.6)]"></i>
-                </div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            
+            <!-- Cross Header -->
+            <div class="mb-6 inline-block">
+                <i class="fas fa-cross text-3xl md:text-4xl text-gold-400 drop-shadow-[0_0_15px_rgba(212,175,55,0.7)]"></i>
             </div>
 
             <!-- Pre-heading -->
-            <p class="font-cinzel text-xs md:text-sm tracking-[0.3em] uppercase text-blush-300 mb-4">
-                Together with our families
-            </p>
+            <p class="quote">“The Lord has done great things for us, and we are filled with joy.”<small>PSALM 126:3</small>
+      </p>
 
-            <!-- Couple Names -->
+            <!-- Main Couple Name Heading -->
             <div class="my-4">
-                <h1 class="font-script text-6xl sm:text-7xl md:text-9xl text-white drop-shadow-lg leading-tight">
-                    Sonali <span class="font-serif text-3xl sm:text-4xl md:text-6xl text-gold-400 mx-2">&</span> Jonathan
+                <h1 class="font-script text-6xl sm:text-8xl md:text-9xl drop-shadow-xl leading-tight gold">
+                    Sonali 
+                    </h1>
+                    <p class="par">D/o Late Simão &amp; Victoria Paulo</p>
+                    <p class="amp script">&amp;</p>
+                         <h1 class="font-script text-6xl sm:text-8xl md:text-9xl  drop-shadow-xl leading-tight gold">
+                        Jonathan
                 </h1>
+                <p class="par">S/o Geraldo &amp; Jasmine Fernandes</p>
             </div>
 
             <!-- Invitation Text -->
-            <p class="font-serif italic text-lg md:text-2xl text-slate-300 max-w-2xl mx-auto my-6 font-light">
-                invite you to witness the beginning of our forever
+            <p class="font-serif italic text-lg sm:text-2xl text-slate-200 max-w-2xl mx-auto my-6 font-light">
+                Together with our families, invite you to witness the beginning of our forever.
             </p>
 
-            <div class="divider-line w-48 md:w-64 mx-auto my-8"></div>
-
-            <!-- Date & Location Brief -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-200 font-cinzel text-sm md:text-base tracking-wider">
-                <div class="flex items-center gap-2">
-                    <i class="far fa-calendar-alt text-gold-400"></i>
-                    <span>Sunday, January 10, 2027</span>
-                </div>
-                <span class="hidden md:inline text-gold-500">•</span>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-map-marker-alt text-gold-400"></i>
-                    <span>Mapusa, Goa</span>
-                </div>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="mt-12 animate-bounce">
-                <a href="#scripture" class="text-gold-400/70 hover:text-gold-400 text-2xl transition-colors">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
-        </div>
+            <div class="divider-line w-48 md:w-64 mx-auto my-8"></div>         
     </section>
 
-    <!-- Scripture Verse Section -->
-    <section id="scripture" class="py-20 px-4 relative bg-navy-800/80">
+    <!-- SCRIPTURE VERSE SECTION 
+    <section id="scripture" class="py-20 px-4 relative bg-navy-900/90">
         <div class="max-w-3xl mx-auto text-center">
             <div class="glass-card p-8 md:p-12 rounded-2xl relative shadow-2xl border border-gold-500/30">
-                <!-- Dove Graphic overlay -->
-                <div class="text-gold-400/20 text-6xl mb-4">
+                <div class="text-gold-400/40 text-5xl md:text-6xl mb-4">
                     <i class="fas fa-dove"></i>
                 </div>
                 
-                <p class="font-serif text-xl md:text-3xl italic text-slate-100 leading-relaxed mb-6">
+                <p class="font-garamond italic text-2xl sm:text-3xl md:text-4xl text-slate-100 leading-relaxed mb-6">
                     "The Lord has done great things for us, and we are filled with joy"
                 </p>
                 
                 <div class="inline-block font-cinzel text-xs md:text-sm tracking-widest text-gold-400 uppercase font-semibold border-t border-b border-gold-500/40 py-2 px-6">
-                    Psalm 126:3
+                    – Psalm 126:3
                 </div>
             </div>
         </div>
     </section>
+-->
 
-    <!-- Couple Details Section -->
+    <!-- BRIDE & GROOM COUPLE SECTION
     <section id="couple" class="py-20 px-4 relative">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="font-cinzel text-2xl md:text-4xl text-gold-400 tracking-widest uppercase mb-3">The Happy Couple</h2>
+                <h2 class="font-cinzel text-2xl md:text-4xl text-gold-400 tracking-widest uppercase mb-3">The Bride & Groom</h2>
                 <div class="divider-line w-32 mx-auto"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <!-- Bride -->
-                <div class="glass-card p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-blush-300">
-                    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-navy-700 border-2 border-gold-400 flex items-center justify-center text-4xl text-blush-300 shadow-inner">
+                
+                //BRIDE CARD
+                <div class="glass-card p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-blush-400 shadow-xl">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-navy-800 border-2 border-blush-400 flex items-center justify-center text-3xl text-blush-300 shadow-inner">
                         <i class="fas fa-female"></i>
                     </div>
-                    <h3 class="font-script text-4xl text-white mb-2">Sonali</h3>
-                    <p class="font-cinzel text-xs text-gold-400 uppercase tracking-widest mb-4">The Bride</p>
-                    <div class="border-t border-slate-700/60 pt-4 mt-4">
-                        <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Daughter of</p>
-                        <p class="font-serif text-sm md:text-base text-slate-200">Late Simão & Victoria Paulo</p>
+                    <h3 class="font-script text-5xl md:text-6xl text-white mb-2">Sonali</h3>
+                    <p class="font-cinzel text-xs text-gold-400 uppercase tracking-widest mb-4">Daughter of</p>
+                    <div class="border-t border-slate-700/60 pt-4 mt-2">
+                        <p class="font-serif text-base md:text-lg text-slate-200">Late Simão & Victoria Paulo</p>
                     </div>
                 </div>
 
-                <!-- Groom -->
-                <div class="glass-card p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-gold-400">
-                    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-navy-700 border-2 border-gold-400 flex items-center justify-center text-4xl text-gold-400 shadow-inner">
+               // GROOM CARD 
+                <div class="glass-card p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-gold-400 shadow-xl">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-navy-800 border-2 border-gold-400 flex items-center justify-center text-3xl text-gold-400 shadow-inner">
                         <i class="fas fa-male"></i>
                     </div>
-                    <h3 class="font-script text-4xl text-white mb-2">Jonathan</h3>
-                    <p class="font-cinzel text-xs text-gold-400 uppercase tracking-widest mb-4">The Groom</p>
-                    <div class="border-t border-slate-700/60 pt-4 mt-4">
-                        <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Son of</p>
-                        <p class="font-serif text-sm md:text-base text-slate-200">Geraldo & Jasmine Fernandes</p>
+                    <h3 class="font-script text-5xl md:text-6xl text-white mb-2">Jonathan</h3>
+                    <p class="font-cinzel text-xs text-gold-400 uppercase tracking-widest mb-4">Son of</p>
+                    <div class="border-t border-slate-700/60 pt-4 mt-2">
+                        <p class="font-serif text-base md:text-lg text-slate-200">Geraldo & Jasmine Fernandes</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
+-->
 
-    <!-- Countdown Timer Section -->
-    <section id="countdown" class="py-20 px-4 bg-navy-800/50 relative">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-cinzel text-xl md:text-3xl text-slate-200 tracking-widest uppercase mb-2">Counting Down To The Big Day</h2>
-            <p class="font-script text-3xl text-gold-400 mb-10">January 10, 2027</p>
+    <!-- LIVE COUNTDOWN TIMER SECTION -->
+    <section id="countdown" class="py-20 px-4 bg-navy-900/60 relative">
+        <div class="max-w-4xl mx-auto text-center">             
+            <h2 class="font-cinzel text-xl md:text-3xl text-slate-200 tracking-widest uppercase mb-2">Counting Down To Our Forever</h2>
+            <p class="font-script text-3xl md:text-4xl text-gold-400 mb-10">Sunday, January 10, 2027</p>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <!-- Days -->
                 <div class="glass-card p-6 rounded-xl border border-gold-500/30">
                     <span id="days" class="font-serif text-4xl md:text-6xl font-bold text-gold-400 block mb-2">00</span>
                     <span class="font-cinzel text-xs text-slate-300 tracking-widest uppercase">Days</span>
                 </div>
-                <!-- Hours -->
                 <div class="glass-card p-6 rounded-xl border border-gold-500/30">
                     <span id="hours" class="font-serif text-4xl md:text-6xl font-bold text-blush-300 block mb-2">00</span>
                     <span class="font-cinzel text-xs text-slate-300 tracking-widest uppercase">Hours</span>
                 </div>
-                <!-- Minutes -->
                 <div class="glass-card p-6 rounded-xl border border-gold-500/30">
                     <span id="minutes" class="font-serif text-4xl md:text-6xl font-bold text-gold-400 block mb-2">00</span>
                     <span class="font-cinzel text-xs text-slate-300 tracking-widest uppercase">Minutes</span>
                 </div>
-                <!-- Seconds -->
                 <div class="glass-card p-6 rounded-xl border border-gold-500/30">
                     <span id="seconds" class="font-serif text-4xl md:text-6xl font-bold text-blush-300 block mb-2">00</span>
                     <span class="font-cinzel text-xs text-slate-300 tracking-widest uppercase">Seconds</span>
                 </div>
             </div>
+            <!-- Add to Calendar Button -->
+             <h1>.</h1>
+            <button onclick="addToGoogleCalendar()" class="inline-flex items-center gap-2 glass-card px-5 py-2.5 rounded-full font-cinzel tracking-wider text-gold-300 hover:text-navy-950 hover:bg-gold-400 transition-all border border-gold-500/40 shadow-lg cursor-pointer">
+                <i class="far fa-calendar-plus text-sm"></i> Add to Google Calendar
+            </button>
         </div>
     </section>
 
-    <!-- Schedule / Events Section -->
+    <!-- EVENT SCHEDULE & MAP DIRECTIONS -->
     <section id="events" class="py-20 px-4 relative">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
                 <p class="font-script text-3xl text-blush-300">Wedding Celebrations</p>
-                <h2 class="font-cinzel text-2xl md:text-4xl text-gold-400 tracking-widest uppercase mb-3">Schedule of Events</h2>
+                <h2 class="font-cinzel text-2xl md:text-4xl text-gold-400 tracking-widest uppercase mb-3">Event Schedule</h2>
                 <div class="divider-line w-32 mx-auto"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Event 1: Nuptials -->
+                
+                <!-- HOLY MASS & NUPTIALS CARD -->
                 <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between border-l-4 border-l-gold-400 hover:shadow-2xl transition-all duration-300">
                     <div>
                         <div class="flex items-center justify-between mb-6">
                             <span class="bg-gold-500/20 text-gold-300 font-cinzel text-xs px-3 py-1 rounded-full border border-gold-500/40">
-                                <i class="fas fa-church mr-1"></i> Nuptial Mass
+                                <i class="fas fa-church mr-1"></i> Holy Mass & Nuptials
                             </span>
                             <span class="font-cinzel text-sm text-slate-300">
                                 <i class="far fa-clock text-gold-400 mr-1"></i> 3:30 PM
                             </span>
                         </div>
 
-                        <h3 class="font-serif text-2xl text-white mb-2">St. Jerome Church</h3>
+                        <h3 class="font-serif text-2xl md:text-3xl text-white mb-2">St. Jerome Church</h3>
                         <p class="text-slate-300 text-sm mb-6 flex items-start gap-2">
                             <i class="fas fa-map-marker-alt text-gold-400 mt-1"></i>
                             Mapusa, Goa
                         </p>
                         
                         <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                            Join us as we exchange our vows and receive God's blessings in the solemn ceremony of holy matrimony.
+                            Join us in holy matrimony as we exchange vows and seek divine blessings in church.
                         </p>
                     </div>
 
-                    <a href="https://maps.google.com/?q=St.+Jerome+Church+Mapusa+Goa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl glass-card-light text-gold-300 text-xs font-cinzel tracking-wider uppercase hover:bg-gold-500 hover:text-navy-900 transition-all font-semibold border border-gold-500/30">
+                    <a href="https://maps.google.com/?q=St.+Jerome+Church+Mapusa+Goa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl glass-card-light text-gold-300 text-xs font-cinzel tracking-wider uppercase hover:bg-gold-500 hover:text-navy-950 transition-all font-semibold border border-gold-500/30">
                         <i class="fas fa-directions"></i> Get Directions
                     </a>
                 </div>
 
-                <!-- Event 2: Reception -->
+                <!-- RECEPTION CARD -->
                 <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between border-l-4 border-l-blush-400 hover:shadow-2xl transition-all duration-300">
                     <div>
                         <div class="flex items-center justify-between mb-6">
@@ -375,97 +454,50 @@
                                 <i class="fas fa-glass-cheers mr-1"></i> Reception
                             </span>
                             <span class="font-cinzel text-sm text-slate-300">
-                                <i class="far fa-clock text-gold-400 mr-1"></i> 7:00 PM sharp
+                                <i class="far fa-clock text-gold-400 mr-1"></i> 7:00 PM Sharp
                             </span>
                         </div>
 
-                        <h3 class="font-serif text-2xl text-white mb-2">Severina Gardens</h3>
+                        <h3 class="font-serif text-2xl md:text-3xl text-white mb-2">Severina Gardens</h3>
                         <p class="text-slate-300 text-sm mb-6 flex items-start gap-2">
                             <i class="fas fa-map-marker-alt text-blush-300 mt-1"></i>
                             Mapusa, Goa
                         </p>
                         
                         <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                            An evening of celebration, dinner, music, and dancing as we toast to love and happiness.
+                            An enchanting evening of music, dining, and dance to celebrate our new beginning.
                         </p>
                     </div>
 
-                    <a href="https://maps.google.com/?q=Severina+Gardens+Mapusa+Goa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl glass-card-light text-blush-300 text-xs font-cinzel tracking-wider uppercase hover:bg-blush-400 hover:text-navy-900 transition-all font-semibold border border-blush-400/30">
+                    <a href="https://maps.google.com/?q=Severina+Gardens+Mapusa+Goa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl glass-card-light text-blush-300 text-xs font-cinzel tracking-wider uppercase hover:bg-blush-400 hover:text-navy-950 transition-all font-semibold border border-blush-400/30">
                         <i class="fas fa-directions"></i> Get Directions
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- RSVP & Contact Section -->
-    <section id="rsvp" class="py-20 px-4 bg-navy-800/80 relative">
+    <!-- RSVP & WHATSAPP CONTACT SECTION -->
+    <section id="rsvp" class="py-20 px-4 bg-navy-900/80 relative">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
-                <p class="font-script text-3xl text-gold-400">Contact / RSVP </p>
-                <!--<h2 class="font-cinzel text-2xl md:text-4xl text-white tracking-widest uppercase mb-3"></h2>
-                <div class="divider-line w-32 mx-auto mb-4"></div>
-                <p class="text-xs text-slate-300 uppercase tracking-widest">Please let us know if you will be joining us</p>
+                <p class="font-script text-3xl text-gold-400">Contact Hosts Directly</p>
+                
             </div>
 
-            <div class="glass-card p-8 md:p-10 rounded-2xl shadow-xl">
-                <form id="rsvp-form" onsubmit="handleRSVPSubmit(event)" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block font-cinzel text-xs text-gold-400 uppercase tracking-wider mb-2">Full Name *</label>
-                            <input type="text" required placeholder="Enter your full name" class="w-full bg-navy-900/80 border border-slate-700 focus:border-gold-400 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none transition-colors">
-                        </div>
-                        <div>
-                            <label class="block font-cinzel text-xs text-gold-400 uppercase tracking-wider mb-2">Phone / WhatsApp *</label>
-                            <input type="tel" required placeholder="Your contact number" class="w-full bg-navy-900/80 border border-slate-700 focus:border-gold-400 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none transition-colors">
-                        </div>
-                    </div>
+            <div class="glass-card p-8 md:p-10 rounded-2xl shadow-2xl">
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block font-cinzel text-xs text-gold-400 uppercase tracking-wider mb-2">Attendance *</label>
-                            <select required class="w-full bg-navy-900/80 border border-slate-700 focus:border-gold-400 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none transition-colors">
-                                <option value="" class="bg-navy-900">Will you attend?</option>
-                                <option value="yes" class="bg-navy-900">Joyfully Accept</option>
-                                <option value="no" class="bg-navy-900">Regretfully Decline</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block font-cinzel text-xs text-gold-400 uppercase tracking-wider mb-2">Number of Guests</label>
-                            <select class="w-full bg-navy-900/80 border border-slate-700 focus:border-gold-400 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none transition-colors">
-                                <option value="1" class="bg-navy-900">1 Person</option>
-                                <option value="2" class="bg-navy-900">2 Persons</option>
-                                <option value="3" class="bg-navy-900">3 Persons</option>
-                                <option value="4" class="bg-navy-900">4+ Persons</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block font-cinzel text-xs text-gold-400 uppercase tracking-wider mb-2">Warm Wishes / Message</label>
-                        <textarea rows="3" placeholder="Leave a message for Sonali & Jonathan..." class="w-full bg-navy-900/80 border border-slate-700 focus:border-gold-400 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none transition-colors"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full btn-shimmer text-navy-900 font-cinzel font-bold text-sm tracking-widest uppercase py-4 rounded-xl shadow-lg transform hover:-translate-y-0.5 transition-all">
-                        Send RSVP
-                    </button>
-                </form>
-
-                <div id="rsvp-success" class="hidden text-center py-8">
-                    <i class="fas fa-heart text-5xl text-blush-400 mb-4 animate-bounce"></i>
-                    <h3 class="font-serif text-2xl text-white mb-2">Thank You!</h3>
-                    <p class="text-slate-300 text-sm">Your response has been received. We look forward to celebrating with you!</p>
-                </div>-->
-
-                <div class="mt-10 pt-8 border-t border-slate-700/60 text-center">
-                    <p class="font-cinzel text-xs text-slate-400 uppercase tracking-widest mb-4">Direct Contacts & RSVP via Call / WhatsApp</p>
+                <!-- DIRECT CONTACT NUMBERS FROM INVITATION CARD -->
+                <div class="text-center">
+                    
                     
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/919923245802" target="_blank" class="inline-flex items-center gap-2 glass-card-light px-5 py-2.5 rounded-full text-xs font-semibold text-gold-300 hover:bg-gold-500 hover:text-navy-900 transition-all border border-gold-500/30">
-                            <i class="fab fa-whatsapp text-emerald-400 text-base"></i> 9923245802
+                        <a href="https://wa.me/919923245802" target="_blank" class="inline-flex items-center gap-2 glass-card-light px-5 py-2.5 rounded-full text-xs font-semibold text-gold-300 hover:bg-gold-500 hover:text-navy-950 transition-all border border-gold-500/30">
+                            Jonathan<i class="fab fa-whatsapp text-emerald-400 text-base"></i> 9923245802
                         </a>
-                        <a href="https://wa.me/918552861861" target="_blank" class="inline-flex items-center gap-2 glass-card-light px-5 py-2.5 rounded-full text-xs font-semibold text-gold-300 hover:bg-gold-500 hover:text-navy-900 transition-all border border-gold-500/30">
-                            <i class="fab fa-whatsapp text-emerald-400 text-base"></i> 8552861861
+                        <a href="https://wa.me/918552861861" target="_blank" class="inline-flex items-center gap-2 glass-card-light px-5 py-2.5 rounded-full text-xs font-semibold text-gold-300 hover:bg-gold-500 hover:text-navy-950 transition-all border border-gold-500/30">
+                           Sonali <i class="fab fa-whatsapp text-emerald-400 text-base"></i> 8552861861
                         </a>
                     </div>
                 </div>
@@ -473,19 +505,131 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- FOOTER -->
     <footer class="py-12 px-4 border-t border-gold-500/20 text-center text-xs text-slate-400 font-cinzel">
         <div class="max-w-4xl mx-auto space-y-4">
             <p class="font-script text-3xl text-gold-400">Sonali & Jonathan</p>
             <p class="tracking-widest">January 10, 2027 • Mapusa, Goa</p>
             <div class="divider-line w-24 mx-auto my-4"></div>
-            <p class="text-slate-500 text-[10px]">Made with love for our special day</p>
+            <p class="text-slate-500 text-[10px]">With love, faith & family blessings</p>
         </div>
     </footer>
 
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
-        // --- 1. COUNTDOWN TIMER LOGIC ---
-        // Target date: Sunday, January 10, 2027 at 15:30:00 (St. Jerome Church Nuptial Mass)
+        let audioCtx = null;
+        let isPlaying = false;
+
+        // Serene divine harp & chime sound effect for gate opening
+        function playDivineHarpChime() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!audioCtx) audioCtx = new AudioContext();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                // Divine Angelic Arpeggio Notes: C5, E5, G5, B5, C6, E6, G6
+                const notes = [523.25, 659.25, 783.99, 987.77, 1046.50, 1318.51, 1567.98];
+                notes.forEach((freq, index) => {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, audioCtx.currentTime + index * 0.12);
+                    
+                    gain.gain.setValueAtTime(0, audioCtx.currentTime + index * 0.12);
+                    gain.gain.linearRampToValueAtTime(0.22, audioCtx.currentTime + index * 0.12 + 0.08);
+                    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + index * 0.12 + 2.2);
+                    
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    
+                    osc.start(audioCtx.currentTime + index * 0.12);
+                    osc.stop(audioCtx.currentTime + index * 0.12 + 2.3);
+                });
+            } catch (e) {
+                console.log("Web Audio API disabled or unsupported", e);
+            }
+        }
+
+        // Ambient romantic background music generator using Web Audio synthesizer
+        function startAmbientMusic() {
+            try {
+                if (!audioCtx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioCtx = new AudioContext();
+                }
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                const masterGain = audioCtx.createGain();
+                masterGain.gain.setValueAtTime(0.038, audioCtx.currentTime);
+
+                //const chordFreqs = [261.63, 329.63, 392.00, 523.25];
+                //chordFreqs.forEach(freq => {
+                //    const osc = audioCtx.createOscillator();
+                //    osc.type = 'triangle';
+                //   osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                //    osc.connect(masterGain);
+                //    osc.start();
+                //});
+
+                masterGain.connect(audioCtx.destination);
+                isPlaying = true;
+                const icon = document.getElementById("audio-icon");
+                if (icon) icon.className = "fas fa-volume-up text-lg text-gold-400";
+            } catch (e) {
+                console.log("Music start error", e);
+            }
+        }
+
+        function toggleAudio() {
+            const icon = document.getElementById("audio-icon");
+            if (!isPlaying) {
+                startAmbientMusic();
+            } else {
+                if (audioCtx) audioCtx.suspend();
+                isPlaying = false;
+                icon.className = "fas fa-music text-lg";
+            }
+        }
+
+        // REVEAL INVITATION WITH ETHEREAL ANGELS SWINGING GRAND GATES
+        function revealWeddingInvitation() {
+            playDivineHarpChime();
+
+            const gatesWrapper = document.getElementById('gates-wrapper');
+            const centerTrigger = document.getElementById('center-trigger');
+            const entranceOverlay = document.getElementById('entrance-overlay');
+
+            // Fade out central emblem gracefully
+            centerTrigger.style.opacity = '0';
+            centerTrigger.style.transform = 'scale(0.85)';
+
+            // Trigger Angel & Grand Gate Opening class animation
+            setTimeout(() => {
+                gatesWrapper.classList.add('gates-opening');
+            }, 150);
+
+            // Smoothly dissolve entrance overlay & transition to main website page
+            setTimeout(() => {
+                entranceOverlay.style.opacity = '0';
+                entranceOverlay.style.visibility = 'hidden';
+                startAmbientMusic();
+            }, 2300);
+        }
+
+        // Add Event to Google Calendar Link Generator
+        function addToGoogleCalendar() {
+            const title = encodeURIComponent("Sonali & Jonathan's Wedding");
+            const details = encodeURIComponent("Witness the wedding of Sonali & Jonathan at St. Jerome Church followed by Reception at Severina Gardens, Mapusa, Goa.");
+            const location = encodeURIComponent("St. Jerome Church, Mapusa, Goa");
+            const startTime = "20270110T100000Z";
+            const endTime = "20270110T180000Z";
+            
+            const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startTime}/${endTime}&details=${details}&location=${location}`;
+            window.open(url, '_blank');
+        }
+
+        // Countdown Timer Logic
         const weddingDate = new Date("January 10, 2027 15:30:00").getTime();
 
         function updateCountdown() {
@@ -505,15 +649,21 @@
             } else {
                 document.getElementById("countdown").innerHTML = `
                     <div class="text-center font-serif text-3xl text-gold-400">
-                        Today is the Day! Celebrating Our Wedding!
+                        Today is our Wedding Day! Celebrating our Matrimony!
                     </div>`;
             }
         }
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
+        // RSVP Form Submission Handler
+        function handleRSVPSubmit(e) {
+            e.preventDefault();
+            document.getElementById("rsvp-form").classList.add("hidden");
+            document.getElementById("rsvp-success").classList.remove("hidden");
+        }
 
-        // --- 2. FLOATING PETALS & SPARKLES CANVAS ANIMATION ---
+        // Falling Rose Petals Canvas Physics Simulation
         const canvas = document.getElementById("petals-canvas");
         const ctx = canvas.getContext("2d");
 
@@ -524,7 +674,7 @@
         window.addEventListener("resize", resizeCanvas);
         resizeCanvas();
 
-        class Particle {
+        class Petal {
             constructor() {
                 this.reset();
             }
@@ -532,22 +682,21 @@
             reset() {
                 this.x = Math.random() * canvas.width;
                 this.y = -20;
-                this.size = Math.random() * 8 + 4;
-                this.speedY = Math.random() * 1.5 + 0.5;
+                this.size = Math.random() * 9 + 4;
+                this.speedY = Math.random() * 1.1 + 0.4;
                 this.speedX = Math.random() * 1 - 0.5;
                 this.rotation = Math.random() * 360;
                 this.rotationSpeed = Math.random() * 2 - 1;
-                this.opacity = Math.random() * 0.6 + 0.3;
-                // Soft pink petals or golden sparkle dots
+                this.opacity = Math.random() * 0.65 + 0.35;
                 this.isPetal = Math.random() > 0.3;
                 this.color = this.isPetal 
-                    ? (Math.random() > 0.5 ? '#f8b9c6' : '#e85d7f') 
+                    ? (Math.random() > 0.5 ? '#e08dac' : '#f2a7b8') 
                     : '#d4af37';
             }
 
             update() {
                 this.y += this.speedY;
-                this.x += this.speedX + Math.sin(this.y * 0.01) * 0.5;
+                this.x += this.speedX + Math.sin(this.y * 0.012) * 0.6;
                 this.rotation += this.rotationSpeed;
 
                 if (this.y > canvas.height + 20) {
@@ -562,7 +711,6 @@
                 ctx.globalAlpha = this.opacity;
 
                 if (this.isPetal) {
-                    // Rose petal shape
                     ctx.fillStyle = this.color;
                     ctx.beginPath();
                     ctx.moveTo(0, 0);
@@ -570,7 +718,6 @@
                     ctx.bezierCurveTo(this.size * 1.5, this.size, this.size, -this.size, 0, 0);
                     ctx.fill();
                 } else {
-                    // Gold sparkle
                     ctx.fillStyle = this.color;
                     ctx.beginPath();
                     ctx.arc(0, 0, this.size / 3, 0, Math.PI * 2);
@@ -581,76 +728,24 @@
             }
         }
 
-        const particles = [];
-        const particleCount = 35;
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
+        const petals = [];
+        const petalCount = 45;
+        for (let i = 0; i < petalCount; i++) {
+            petals.push(new Petal());
         }
 
-        function animateParticles() {
+        function animatePetals() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach((p) => {
+            petals.forEach((p) => {
                 p.update();
                 p.draw();
             });
-            requestAnimationFrame(animateParticles);
+            requestAnimationFrame(animatePetals);
         }
+
         window.onload = function() {
-            animateParticles();
+            animatePetals();
         };
-
-
-        // --- 3. RSVP FORM HANDLING ---
-        function handleRSVPSubmit(e) {
-            e.preventDefault();
-            document.getElementById("rsvp-form").classList.add("hidden");
-            document.getElementById("rsvp-success").classList.remove("hidden");
-        }
-
-
-        // --- 4. WEBAUDIO AMBIENT SYNTHESIS (NO EXTERNAL AUDIO FILE NEEDED) ---
-        let audioCtx = null;
-        let isPlaying = false;
-        let ambientOsc = null;
-        let gainNode = null;
-
-        function toggleAudio() {
-            const icon = document.getElementById("audio-icon");
-            
-            if (!isPlaying) {
-                if (!audioCtx) {
-                    const AudioContext = window.AudioContext || window.webkitAudioContext;
-                    audioCtx = new AudioContext();
-                }
-
-                if (audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
-
-                // Create romantic ambient chord synth
-                gainNode = audioCtx.createGain();
-                gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime); // Low background volume
-
-                const frequencies = [261.63, 329.63, 392.00, 523.25]; // C Major Harmony
-                frequencies.forEach(freq => {
-                    const osc = audioCtx.createOscillator();
-                    osc.type = 'sine';
-                    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-                    osc.connect(gainNode);
-                    osc.start();
-                });
-
-                gainNode.connect(audioCtx.destination);
-                isPlaying = true;
-                icon.className = "fas fa-volume-up text-lg text-gold-400";
-            } else {
-                if (audioCtx) {
-                    audioCtx.suspend();
-                }
-                isPlaying = false;
-                icon.className = "fas fa-music text-lg";
-            }
-        }
     </script>
 </body>
 </html>
